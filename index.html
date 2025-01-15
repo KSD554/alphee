@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Pondoh Alphée Joseph Coulibaly</title>
+   
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,12 +64,15 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #007BFF;
-            color: #fff;
-        }
+          footer {
+        position: relative; /* Utilisez fixed si vous souhaitez le fixer en bas */
+        width: 100%;       /* Occuper toute la largeur de l'écran */
+        bottom: 0;
+    }
+    footer p {
+        margin: 0;
+        font-size: 14px;   /* Taille de texte adaptée pour tous les écrans */
+    }
         .btn {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -81,103 +85,181 @@
         .btn:hover {
             background: #0056b3;
         }
+
+        /* Modifier la couleur des icônes de contrôle */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #343a40; /* Couleur sombre */
+        border-radius: 50%;       /* Rendre les boutons ronds */
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Appliquer une bordure pour les différencier davantage */
+    .custom-control {
+        border: 2px solid #343a40;
+        border-radius: 50%;
+    }
+
+    /* Ajouter un effet au survol */
+    .custom-control:hover .carousel-control-prev-icon,
+    .custom-control:hover .carousel-control-next-icon {
+        background-color: #495057; /* Couleur plus claire au survol */
+    }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Pondoh Alphée Joseph Coulibaly</h1>
-        <p>Développeur Web | Infographiste</p>
+    <header class="text-center py-4">
+        <h1 class="fw-bold">Pondoh Alphée Joseph Coulibaly</h1>
+        <p class="text-muted">Développeur Web | Infographiste</p>
     </header>
-    <nav>
-        <a href="#about">À propos</a>
-        <a href="#education">Formation</a>
-        <a href="#skills">Compétences</a>
-        <a href="#projects">Projets</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <section id="about">
-            <h2>À propos</h2>
-            <div class="card">
-                <img src="./images/alphee.png" alt="Photo de Pondoh Alphée Joseph Coulibaly">
-                <p>Je m'appelle Pondoh Alphée Joseph Coulibaly, développeur web passionné et infographiste créatif. Mon objectif est de créer des solutions innovantes et visuellement attrayantes.</p>
-            </div>
-        </section>
-        <section id="education">
-            <h2>Formation</h2>
-            <ul>
-                <li><strong>2023-2024</strong> : Brevet de Technicien Supérieur, HETEC, Bouaké</li>
-                <li><strong>2021-2022</strong> : Baccalauréat Série D, Lycée Municipale Djibo Sounkalo</li>
-                <li><strong>2018-2019</strong> : BEPC, Lycée Municipale Djibo Sounkalo</li>
-                <li><strong>2014-2015</strong> : CEPE, EPP Christiane Mourot</li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Compétences</h2>
-            <div class="card">
-                
-                <ul>
-                    <li>Création d’affiches publicitaires, logos, cartes de visite avec Photoshop</li>
-                    <li>Développement d’applications web avec PHP</li>
-                    <li>Montage vidéo avec Premiere Pro</li>
-                    <li>Installation de systèmes d’exploitation : Windows et Linux</li>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-lg-none fw-bold" href="#">PAJC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Formation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
-        </section>
-        <section id="projects">
-            <h2>Projets</h2>
-            <div class="card">
-                <img src="./images/affiche de djeme.jpg" alt="Affiche Publicitaire 1">
-                <p>Affiche publicitaire réalisée pour un événement</p>
-            </div>
-            <div class="card">
-                <img src="./images/Affiche Diem22.jpg" alt="Affiche Publicitaire 2">
-                <p>Affiche publicitaire réalisée pour un événement</p>
-            </div>
-            <div class="card">
-                <img src="./images/affiche de vente d'oeuf.jpg" alt="Affiche Publicitaire 3">
-                <p>Création d’une affiche promotionnelle pour une boutique spécialisée.</p>
-            </div>
-            <div class="card">
-                <img src="./images/Affiche de vente1.jpg" alt="Affiche Publicitaire 4">
-                <p>Création d’une affiche de vente </p>
-            </div>
-            <div class="card">
-                <img src="./images/Affiche de Savon1.jpg" alt="Affiche Publicitaire 5">
-                <p>Création d’une affiche de vente </p>
-            </div>
-            <div class="card">
-                <img src="./images/resto1.jpg" alt="Affiche Publicitaire 6">
-                <p>Création d’une affiche pour resto </p>
-            </div>
-            <div class="card">
-                <img src="./images/Resto.jpg" alt="Affiche Publicitaire 7">
-                <p>Création d’une affiche pour resto </p>
-            </div>
-            <div class="card">
-                <img src="./images/concert affiche.jpg" alt="Affiche Publicitaire 8">
-                <p>Conception d’une affiche Concert</p>
-            </div>
-            <div class="card">
-                <img src="./images/cakess.jpg" alt="Affiche Publicitaire 9">
-                <p>Conception d’une affiche Cakes</p>
-            </div>
-            <div class="card">
-                <img src="./images/comAJ.jpg" alt="Affiche Publicitaire 10">
-                <p>Conception d’une affiche pour les Prestations de AJ</p>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <!-- Section À propos -->
+        <section id="about" class="mb-5">
+            <h2 class="text-center mb-4">À propos</h2>
+            <div class="card shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./images/alphee.png" class="img-fluid rounded-start"
+                            alt="Photo de Pondoh Alphée Joseph Coulibaly">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p>Je m'appelle Pondoh Alphée Joseph Coulibaly, développeur web passionné et infographiste
+                                créatif. Mon objectif est de créer des solutions innovantes et visuellement attrayantes.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="card">
-                <p>Email : <a href="mailto:alpheecoulibaly08@gmail.com">alpheecoulibaly08@gmail.com</a></p>
-                <p>Téléphone : 0713642865 / 0152201862</p>
-                <a class="btn" href="mailto:alpheecoulibaly08@gmail.com">Me Contacter</a>
+    
+        <!-- Section Formation -->
+        <section id="education" class="mb-5">
+            <h2 class="text-center mb-4">Formation</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>2023-2024 :</strong> Brevet de Technicien Supérieur, HETEC, Bouaké</li>
+                <li class="list-group-item"><strong>2021-2022 :</strong> Baccalauréat Série D, Lycée Municipale Djibo
+                    Sounkalo</li>
+                <li class="list-group-item"><strong>2018-2019 :</strong> BEPC, Lycée Municipale Djibo Sounkalo</li>
+                <li class="list-group-item"><strong>2014-2015 :</strong> CEPE, EPP Christiane Mourot</li>
+            </ul>
+        </section>
+    
+        <!-- Section Compétences -->
+        <section id="skills" class="mb-5">
+            <h2 class="text-center mb-4">Compétences</h2>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <ul>
+                        <li>Création d’affiches publicitaires, logos, cartes de visite avec Photoshop</li>
+                        <li>Développement d’applications web avec PHP</li>
+                        <li>Montage vidéo avec Premiere Pro</li>
+                        <li>Installation de systèmes d’exploitation : Windows et Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section Projets -->
+        <section id="projects" class="mb-5">
+            <h2 class="text-center mb-4">Projets</h2>
+            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <!-- Indicateurs -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+        
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/affiche de djeme.jpg" class="d-block w-100" alt="Affiche Publicitaire 1">
+                        <div class="carousel-caption bg-dark bg-opacity-50">
+                            <p class="text-white">Affiche publicitaire réalisée pour un événement.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/Affiche Diem22.jpg" class="d-block w-100" alt="Affiche Publicitaire 2">
+                        <div class="carousel-caption bg-dark bg-opacity-50">
+                            <p class="text-white">Affiche publicitaire réalisée pour un événement.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/affiche de vente d'oeuf.jpg" class="d-block w-100" alt="Affiche Publicitaire 3">
+                        <div class="carousel-caption bg-dark bg-opacity-50">
+                            <p class="text-white">Création d’une affiche promotionnelle pour une boutique spécialisée.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Contrôles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </section>
+
+
+
+
+    
+        <!-- Section Contact -->
+        <section id="contact" class="mb-5">
+            <h2 class="text-center mb-4">Contact</h2>
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <p>Email : <a href="mailto:alpheecoulibaly08@gmail.com">alpheecoulibaly08@gmail.com</a></p>
+                    <p>Téléphone : 0713642865 / 0152201862</p>
+                    <a class="btn btn-primary" href="mailto:alpheecoulibaly08@gmail.com">Me Contacter</a>
+                </div>
             </div>
         </section>
     </div>
-    <footer>
-        <p>&copy; 2025 Pondoh Alphée Joseph Coulibaly. Tous droits réservés.</p>
-    </footer>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Pondoh Alphée Joseph Coulibaly. Tous droits réservés.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
